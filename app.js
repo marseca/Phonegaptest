@@ -39,7 +39,15 @@ function hola()
                     }
                 );*/
     page = homePage;
-    x$('#container').tween({ left:'100px', backgroundColor:'blue' });
+    /*x$('#container').tween({background:'black',duration:1000,color:'#fff'});*/
     //x$('#container').html(page);
+    emile('test2', 'left:350px;padding:10px;border:50px solid #ff0000', {
+    duration: 500,
+    after: function(){
+      emile('test1', 'background:#0f0;left:100px;padding-bottom:100px;opacity:1', { 
+        duration: 4000, easing: bounce
+      });
+    }
+  });
     
 }
