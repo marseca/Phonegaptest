@@ -3,8 +3,7 @@ window.addEventListener('load', init, false);
 var slider = new PageSlider($("#container"));
 
 $("#medibot").on("touchstart", function(ev) {
-    var e = ev.originalEvent;
-    console.log("sds");
+    changePage('detailPage.html','left');
 })
 
 function init()
