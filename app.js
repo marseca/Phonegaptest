@@ -2,35 +2,35 @@ window.addEventListener('load', init, false);
 
 var slider = new PageSlider($("#container"));
 
-document.getElementById('medibot').addEventListener('touchstart', function(e){
-  changePage("detailPage.html",'left');
- }, false)
-
+$(window).on('hashchange', route);
 
 function init()
 {
     new FastClick(document.body);
-    changePage('homePage.html','left');
+    loadPage("homePage.html");
 }
 
-$(window).on('hashchange', route);
-
-// Basic page routing
+// Llamado cuando cambia el hash
 function route(event) {
-    console.log("hol");
     var page,
         hash = window.location.hash;
-    slider.slidePage($(page));
+    var url = getURL(hash);
+    loadPage(url);
 }
 
-function changePage(url,dir)
+// Carga la pagina y la muestra con un efecto slider
+function loadPage(url)
 {
-    console.log("changepage");
-    var page;
+    console.log("hola " + window.location.hash);
     $.get( url, function( data ) {    
         page = data;
-        slider.slidePage($(page),dir);
-    })    
+        slider.slidePage($(page),'left');
+    })
 }
 
-//route();
+function getURL(hash)
+{
+    var url = hash.split('#');
+    return url[1];
+}
+
