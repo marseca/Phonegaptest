@@ -2,17 +2,18 @@
 <head>
     <title>Page Slider</title>
     <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
-    <script src="lib/cordova-2.5.0.js"></script>
-    <script src="lib/fastclick.js"></script>
-    <script src="lib/xui-core-1.0.0.min.js"></script>     
-    <script src="lib/emile.min.js"></script>     
-    <script src="app.js"></script>
+    <link rel="stylesheet" href="css/pageslider.css">
+    <link rel="stylesheet" href="css/styles.css">
 </head>
 <body>
 
-<div id="page1" style="position:relative;left:0px;background:#00f">pagina 1<br><button onclick="hola()" type="button">Click Me!</button></div>
-<div id="page2" style="position:absolute;width:100%;left:500px;top:0px;background:#0f0;-webkit-transform: translateZ(0);">pagina 2</div>
-<!--<div id="test1" style="position:absolute;left:0px;background:#f00;opacity:0">test</div>
-<div id="test2" style="border:0px solid #00ff00;position:absolute;left:0px;top:400px;background:#0f0">test2</div>-->
+<div id="container"></div>
+
+<script src="lib/cordova-2.5.0.js"></script>
+<script src="lib/fastclick.js"></script>
+<script src="lib/jquery-1.9.1.min.js"></script>
+<script src="pageslider.js"></script>
+<script src="app.js"></script>
+
 </body>
 </html>
