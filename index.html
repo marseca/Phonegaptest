@@ -1,89 +1,15 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<!DOCTYPE HTML>
-<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
-    <head>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=no, minimum-scale=1.0, maximum-scale=1.0" />
-        
-        <title>swipe test</title>
+<html>
+<head>
+    <title>Page Slider</title>
+    <meta name="viewport" content="initial-scale=1, maximum-scale=1, user-scalable=no">
+    <script src="lib/cordova-2.5.0.js"></script>
+    <script src="lib/fastclick.js"></script>
+    <script src="lib/xui-core-1.0.0.min.js"></script>     
+    <script src="app.js"></script>
+</head>
+<body>
 
-
-        <script src="xui.js" type="application/javascript" charset="utf-8"></script>
-        <script src="xui.swipe.js" type="application/javascript" charset="utf-8"></script>
-		<style type="text/css">
-			body {
-				font: 10px Arial, sans-serif;
-				margin: 0;
-			}
-			#zone-test {
-				position: absolute;
-			    height: 100%;
-				width: 100%;
-				
-				background: #cccc00;
-			}
- 
-			
-		</style>
-        <script type="text/javascript">
-
-            function init ()
-            {
-                
- 
-            x$("#zone-test").swipe(
-            function(e, data){
-            	 
-                console.log('type:'+data.type+' deltaX:'+data.deltaX+' deltaY:'+data.deltaY+' distance:'+
-                    data.distance+' delay:'+data.delay+' direction:'+data.direction  );
-                    
-                    switch (data.type){
-                    
-                    case ('direction'):
-                       x$("#zone-test").bottom('direction '+data.direction+'<br />');
-                    break;
-                    case ('doubletap'):
-                       x$("#zone-test").bottom('doubletap <br />');
-                    break;
-                    case ('longtap'):
-                       x$("#zone-test").bottom('longtap <br />');
-                    break;
-                    case ('simpletap'):
-                       x$("#zone-test").bottom('simpletap <br />');
-                    break;
-                    	
-                    }	
-                    
-                    
-            }, {
-            	
-                swipeCapture: true,
-                longTapCapture: true,
-                doubleTapCapture: true,
-                simpleTapCapture: false
-                 
-            }
-            );
-
-
-  
-
-            }
-
-            var _timer=setInterval(function(){
-                if(/loaded|complete/.test(document.readyState)){
-                    clearInterval(_timer)
-                    init() // call target function
-                }}, 10)
-
-        </script>
-    </head>
-    <body>
-    
-        <div id="zone-test">
-         Swipe example : touch screen ... <br />
-         
-         
-            
-        </div>
-    </body>
+<div id="container">¿Qué tal?</div>
+<button onclick="hola()" type="button">Click Me!</button>
+</body>
 </html>
