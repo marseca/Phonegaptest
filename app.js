@@ -40,14 +40,17 @@ function hola()
                 );*/
     page = homePage;
     /*x$('#container').tween({background:'black',duration:1000,color:'#fff'});*/
-    //x$('#container').html(page);
-    emile('test2', 'left:350px;padding:10px;border:50px solid #ff0000', {
+    x$('#page2').html(page);
+    /*emile('test2', 'left:350px;padding:10px;border:50px solid #ff0000', {
     duration: 500,
     after: function(){
       emile('test1', 'background:#0f0;left:100px;padding-bottom:100px;opacity:1', { 
         duration: 4000, easing: bounce
       });
     }
-  });
+  });*/
+    emile('page2', 'left:0px; position:absolute; border:50px solid #ff0000', {
+    duration: 500
+    });
     
 }
